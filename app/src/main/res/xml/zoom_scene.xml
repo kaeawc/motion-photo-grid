@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <StateSet motion:defaultState="@id/grid" />
+
+    <Transition
+        motion:constraintSetStart="@id/grid"
+        motion:constraintSetEnd="@id/zoomed_in"
+        motion:duration="1000"
+        />
+
+    <ConstraintSet android:id="@+id/grid">
+        <Constraint android:id="@+id/photo_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/vertical_middle"
+            />
+        <Constraint android:id="@+id/photo_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="@id/vertical_middle"
+            />
+        <Constraint android:id="@+id/photo_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint android:id="@+id/photo_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/vertical_middle"
+            />
+        <Constraint android:id="@+id/photo_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toStartOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="@id/vertical_middle"
+            />
+        <Constraint android:id="@+id/photo_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toTopOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toEndOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <Constraint android:id="@+id/photo_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toBottomOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toStartOf="@id/vertical_middle"
+            />
+        <Constraint android:id="@+id/photo_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toBottomOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toStartOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="@id/vertical_middle"/>
+        <Constraint android:id="@+id/photo_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintDimensionRatio="1"
+            motion:layout_constraintTop_toBottomOf="@id/horizontal_middle"
+            motion:layout_constraintStart_toEndOf="@id/vertical_middle"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/zoomed_in" motion:deriveConstraintsFrom="@id/grid"/>
+</MotionScene>
