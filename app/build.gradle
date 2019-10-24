@@ -7,17 +7,15 @@ androidExtensions {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "io.kaeawc.motionphotogrid"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        renderscriptTargetApi 27
-        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -39,13 +37,13 @@ dependencies {
     implementation "io.arrow-kt:arrow-core:0.8.2"
 
     // AndroidX Core
-    implementation "androidx.appcompat:appcompat:1.1.0-alpha05"
+    implementation "androidx.appcompat:appcompat:1.1.0-beta01"
     implementation "androidx.core:core:1.2.0-alpha01"
 
     // AndroidX UI
-    implementation "androidx.recyclerview:recyclerview:1.1.0-alpha05"
+    implementation "androidx.recyclerview:recyclerview:1.1.0-alpha06"
     implementation "com.google.android.material:material:1.0.0"
-    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta1"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
     implementation "androidx.transition:transition:1.0.1"
 
     // Logging
